@@ -1,0 +1,12 @@
+<div class="app">
+  <div class="app__nav">
+    <app-fancy-nav class="desktop-only"></app-fancy-nav>
+    <shared-header class="mobile-only"></shared-header>
+  </div>
+  <div class="app__animation-wrapper" [@routeAnimations]="prepareRoute(outlet)">
+    <div class="app__splitter"></div>
+    <div class="app__content" #content>
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>

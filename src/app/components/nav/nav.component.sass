@@ -1,0 +1,41 @@
+@import sass/imports
+
+.nav
+    $self: &
+
+    &__item
+        margin-bottom: 1.5rem
+
+    &__link
+        display: block
+        padding: 1.5rem 3rem
+        min-width: 30rem
+        text-align: right
+        text-transform: uppercase
+        background: linear-gradient(135deg, transparent 50%, var(--accent-color) 50%)
+        background-size: 250%
+        background-position-x: 0%
+        transition: all .5s
+
+        &--small
+            font-size: 70%
+
+        &:hover, &:active, &:focus
+            background-position-x: 75%
+
+        &:active
+            background: linear-gradient(135deg, transparent 50%, var(--accent--active-color) 50%)
+            background-size: 250%
+            background-position-x: 75%
+
+
+    &__sublist
+        #{$self}
+            &__link
+                padding: .75rem 1.5rem
+                padding-right: 5rem
+                font-size: 80%
+
+
+
+        

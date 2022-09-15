@@ -1,0 +1,103 @@
+@import sass/imports
+
+.chrono
+    &-item
+        display: grid
+        grid-template-areas: "icon years primary detail" "icon years secondary detail"
+        grid-template-rows: 2fr 1fr
+        grid-template-columns: 10rem 25rem 1fr
+        row-gap: 1rem
+        align-items: center
+        justify-items: center
+        padding: 2rem
+        margin: 2rem 0
+        @include elevation(1)
+
+        @include media-query()
+            grid-template-areas: "icon detail" "years detail" "primary detail" "secondary detail"
+            grid-template-columns: 1fr auto
+            text-align: center        
+
+        &__icon
+            grid-area: icon
+            max-height: 6rem
+            max-width: 6rem
+
+            & > img
+                width: 100%
+                height: 100%
+
+        &__years
+            grid-area: years
+            display: flex
+            flex-direction: row
+            align-items: center
+            font-size: 200%
+            font-weight: 100
+            text-transform: uppercase
+
+            @include media-query()
+                font-size: 170%
+
+
+        &__primary-text
+            grid-area: primary
+            font-size: 170%
+            letter-spacing: 2px
+            justify-self: flex-end
+            text-align: right
+
+            @include media-query()
+                font-size: 125%
+                justify-self: center
+                text-align: center
+
+            
+        &__secondary-text
+            grid-area: secondary
+            font-weight: 300
+            color: #aaa
+            justify-self: flex-end
+            text-align: right
+            
+            @include media-query()
+                font-size: 100%
+                justify-self: center
+                text-align: center
+
+        &__details
+            grid-area: detail
+            display: flex
+            flex-direction: row
+            justify-content: center
+            justify-self: flex-end
+            min-width: 10rem
+
+            @include media-query()
+                min-width: 3rem
+
+.arrow-button
+    display: inline-block
+    width: 3rem
+    height: 3rem
+    border-right: 5px solid grey
+    border-top: 5px solid grey
+    transform: rotateZ(45deg)
+    transition: all .3s
+
+    &:hover, &:focus
+        transform: translateY(-2px) rotateZ(45deg) 
+    &:active
+        transform: translateY(2px) rotateZ(45deg) 
+        
+
+
+.chrono-detail
+    &__item
+        padding: 1rem 2rem 1rem 1rem
+        list-style-type: disc
+        list-style-position: inside
+        letter-spacing: 1px
+        font-size: 110%
+
+

@@ -1,0 +1,13 @@
+<div class="page about-me">
+    <div class="horizontal-wrapper horizontal-wrapper--vertical-center horizontal-wrapper--mobile-center ">
+        <div class="about-me__image">
+            <img src="assets/portrait-square.jpg">
+        </div>
+        <h1 class="about-me__title title">
+            Stefan Mitterlehner
+        </h1>
+    </div>
+    <div class="about-me__content" [@subRouteAnimation]="prepareAnimation(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+</div>

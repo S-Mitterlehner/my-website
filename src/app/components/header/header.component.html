@@ -1,0 +1,31 @@
+<header class="header" [class.header--transparent]="transparentBackgroundOnTop && isTransparent">
+    <a [routerLink]="'/'" class="logo" (click)="isMenuOpen = false">
+        <div class="logo__wrapper" *ngIf="showLogo">
+            <img src="{{logoSource}}" alt="logo">
+        </div>
+        <span class="logo__text">
+            <span class="logo__initial">S</span><span class="logo__rest">tefan&nbsp;</span>
+            <span class="logo__initial">M</span><span class="logo__rest">itterlehner</span>
+        </span>
+    </a>
+    <div class="header__right">
+        <button class="header__menu-button menu-button" 
+            [class.menu-button--open]="isMenuOpen"  
+            [class.menu-button--closed]="!isMenuOpen" 
+            (click)="isMenuOpen = !isMenuOpen">
+            <span class="menu-button__item menu-button__item--1"></span>
+            <span class="menu-button__item menu-button__item--2"></span>
+            <span class="menu-button__item menu-button__item--3"></span>
+        </button>
+    </div>
+    
+    <div class="menu" *ngIf="isMenuOpen">
+        <app-nav (itemClicked)="isMenuOpen = false"></app-nav>
+        <!-- <button class="menu__theme-switch" (click)="toggleTheme()">
+            Theme wechseln
+            <mat-icon *ngIf="theme.currentTheme === 'light'">brightness_2</mat-icon>
+            <mat-icon *ngIf="theme.currentTheme === 'dark'">brightness_5</mat-icon>
+        </button> -->
+    </div>
+</header>
+<div class="backdrop backdrop--full" *ngIf="isMenuOpen" (click)="isMenuOpen = false"></div>

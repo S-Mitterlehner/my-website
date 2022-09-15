@@ -1,0 +1,12 @@
+<div class="ts-item" (mouseover)="setMouseOver()" (mouseleave)="resetMouseOver()">
+    <div class="ts-item__image">
+        <img [src]="item.icon" [alt]="item.name">
+    </div>
+    <span class="ts-item__name">{{item.name}}</span>
+    <div class="ts-item__tooltip ts-tooltip"
+        [class.ts-tooltip--force-hide]="!tooltipActivated" 
+        [class.ts-tooltip--show]="tooltipActivated && isTooltipVisible" 
+        [class.ts-tooltip--hide]="tooltipActivated && !isTooltipVisible">
+        {{getExperience()}}
+    </div>
+</div>

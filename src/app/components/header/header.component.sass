@@ -1,0 +1,120 @@
+@import sass/imports
+
+.header
+    position: fixed
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    top: 0
+    left: 0
+    height: 5rem
+    width: 100%
+    @include elevation(1)
+    z-index: 1000
+
+    &--transparent
+        background-color: none
+
+    &__right
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+
+.logo
+    position: relative
+    display: flex
+    flex-direction: row
+    align-items: center
+    width: auto
+    height: 100%
+
+    &__wrapper
+        position: relative
+        width: auto
+        height: 100%
+        padding: .5rem
+
+        img
+            width: auto
+            height: 100%
+            max-height: 100%
+            max-width: 100%
+
+    &__text
+        font-size: 140%
+        font-weight: 100
+        text-transform: uppercase
+        letter-spacing: 2px
+        margin-left: 2rem
+
+    &__rest, &__initial
+        font-size: inherit
+        font-weight: inherit
+
+
+
+.menu-button
+    $self: &
+    position: relative
+    display: inline-block
+    width: 4.5rem
+    height: 2.75rem
+    margin-right: .5rem
+    cursor: pointer
+
+    &__item
+        position: absolute
+        left: 0
+        display: inline-block
+        height: .3rem
+        width: 100%
+        @include useColors('menu-button')
+        transition: all .3s
+
+        &--1
+            top: 0        
+
+        &--2
+            top: 50%
+            transform: translateY(-50%)
+
+        &--3
+            bottom: 0
+
+    &--open
+        #{$self}
+            &__item
+                &--1
+                    top: 50%
+                    transform-origin: 50% 50%
+                    transform: translateY(-50%) rotate(45deg)                
+
+                &--2
+                    opacity: 0
+
+                &--3
+                    bottom: 50%
+                    transform-origin: 50% 50%
+                    transform: translateY(50%) rotate(-45deg)
+
+.menu
+    position: absolute
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    right: 0
+    top: 100%
+    padding: 1.4rem 0 1.4rem 5rem
+    @include elevation(24)
+
+    &__theme-switch
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        padding: 1rem
+
+        .mat-icon
+            transform: translateY(-2px)
+            margin-left: 1.3rem

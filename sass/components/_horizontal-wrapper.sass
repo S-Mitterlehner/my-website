@@ -1,0 +1,15 @@
+.horizontal-wrapper
+    display: flex
+    flex-direction: row
+    
+
+    &--center
+        justify-content: center
+
+    &--vertical-center
+        align-items: center
+
+    &--mobile-center
+        @include media-query()
+            align-items: center
+            justify-content: center

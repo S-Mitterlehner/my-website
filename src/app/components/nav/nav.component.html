@@ -1,0 +1,18 @@
+<nav class="nav">
+    <ul class="nav__list">
+        <li class="nav__item">
+            <a class="nav__link" [routerLink]="''" (click)="itemClicked.emit()">Home</a>
+            <ul class="nav__sublist">
+                <li class="nav__sub-item" *ngFor="let r of menuService.getAboutMeRoutes()">
+                    <a class="nav__link" [routerLink]="r.route" (click)="itemClicked.emit()">{{r.text}}</a>
+                </li>
+            </ul>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link" [routerLink]="'references'" (click)="itemClicked.emit()">Referenzen</a>
+        </li>
+        <li class="nav__item">
+            <a class="nav__link nav__link--small" [routerLink]="'imprint'" (click)="itemClicked.emit()">Impressum</a>
+        </li>
+    </ul>
+</nav>

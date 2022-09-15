@@ -1,0 +1,6 @@
+@mixin useColors($name)
+    color: var(-- + $name + -color)
+    background-color: var(-- + $name + -bg-color)
+
+@mixin useColor($propName, $colorName)
+    #{$propName}: var(-- + $colorName + -color)

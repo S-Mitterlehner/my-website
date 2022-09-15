@@ -1,0 +1,54 @@
+@import sass/imports
+    
+.social-media-button
+    $self: &
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    border-radius: 5px
+    transition: all .3s
+    min-width: 15rem
+    max-width: 30rem
+    margin: 1rem
+    
+    &--linked-in
+        background: #15ace5
+
+        &:hover
+            background: darken(#15ace5, 10%)
+
+    &--xing
+        background: #20a5a5
+        &:hover
+            background: darken(#20a5a5, 10%)
+
+    &--twitter
+        background: #23abff
+        &:hover
+            background: darken(#23abff, 10%)
+
+    &--mail
+        background: #f4cd0b
+        &:hover
+            background: darken(#f4cd0b, 10%)
+
+    &__icon
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        background-color: rgba(0,0,0,0.2)
+        height: 4rem
+        width: 4rem
+        padding: 1rem
+        max-height: 4rem
+        max-width: 4rem
+
+        & > img
+            width: 100%
+            height: 100%
+
+    &__text
+        color: white
+        padding: 1rem

@@ -1,0 +1,67 @@
+@import sass/imports
+
+.ts-item
+    position: relative
+    display: grid
+    grid-template-areas: "image" "name" 
+    grid-template-rows: 1fr 3rem
+    align-items: center
+    justify-content: center
+    height: 13rem
+    width: 11rem
+    padding: 1.5rem
+    border-radius: 1rem
+    margin: .5rem
+    @include elevation(4)
+    
+    &__name
+        justify-self: center
+        text-align: center
+        font-size: 80%
+
+    &__image
+        justify-self: center
+        max-width: 6rem
+        max-height: 6rem
+
+        & > img
+            width: 100%
+            height: 100%
+
+
+.ts-tooltip
+    position: absolute
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    top: calc(100% + .5rem)
+    width: 100%
+    height: 5rem
+    font-size: 80%
+    text-align: center
+    z-index: 1000000
+    @include elevation(24)
+    pointer-events: none
+
+
+    &--force-hide
+        opacity: 0
+
+    &--hide
+        animation: fly-out 300ms ease-in-out 0s 1 forwards normal
+
+    &--show
+        animation: fly-in 300ms ease-in-out 0s 1 forwards normal
+
+
+    &::before
+        content: ''
+        position: absolute
+        display: inline-block
+        top: 0
+        left: 50%
+        height: 1rem
+        width: 1rem
+        background-color: var(--24dp-background-color)
+        transform: translate(-50%, -50%) rotate(45deg)

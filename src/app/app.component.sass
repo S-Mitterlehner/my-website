@@ -1,0 +1,54 @@
+@import sass/imports
+    
+.app
+    $self: &
+    display: flex
+    flex-direction: row-reverse
+    justify-content: flex-start
+
+    max-width: 1604px
+    margin: auto
+    overflow: hidden
+    
+    &__wrapper
+        display: block
+        position: relative
+
+    &__animation-wrapper
+        display: flex
+        flex-direction: row-reverse
+        justify-content: flex-start
+        width: 100%
+
+    &__content
+        position: relative
+        padding-right: 4rem
+        margin-right: 7rem
+        width: 100%
+        max-height: 100vh
+        overflow-x: hidden
+        overflow-y: auto
+        scroll-behavior: smooth
+
+    &__splitter
+        position: absolute
+        display: inline-block
+        height: 80vh
+        width: 6px
+        margin-top: 10vh
+        background-color: lightgray
+        box-shadow: 0 0 15px rgba(211,211,211, .4)
+        border-radius: 50%
+
+    @include media-query()
+        flex-direction: column
+
+        &__content
+            margin-top: 5rem
+            overflow-y: auto
+            position: relative
+            padding-right: 1rem
+            margin-right: 1rem
+            min-height: calc(100vh - 5rem)
+            max-height: calc(100vh - 5rem)
+        

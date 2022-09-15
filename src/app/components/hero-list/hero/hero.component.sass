@@ -1,0 +1,64 @@
+@import sass/imports
+
+.hero
+    display: grid
+    grid-template-areas: "image title" "image description" "image tech"
+    grid-template-rows: auto 1fr auto
+    grid-template-columns: auto 1fr
+    gap: 3rem
+    width: 100%
+    padding: 3rem
+    padding-bottom: 10rem
+    margin-bottom: 7rem
+    border-bottom: 2px solid grey
+
+    @include media-query()
+        grid-template-areas: "title" "image" "description" "tech"
+        grid-template-rows: 1fr
+        grid-template-columns: 1fr
+        padding: 3rem 0
+        max-width: 70rem
+        margin: auto
+    
+    @include media-query-reverse()
+        &--left
+            grid-template-areas: "image title" "image description" "image tech"
+            grid-template-columns: auto 1fr
+
+        &--right
+            grid-template-areas: "title image" "description image" "tech image"
+            grid-template-columns: 1fr auto
+
+    &__image
+        grid-area: image
+        max-width: 48rem
+        max-height: 24rem
+        justify-self: center
+
+        & > img 
+            width: 100%
+            height: 100%
+            border: 1px solid white
+            border-radius: 5px
+
+    &__title
+        font-size: 150%
+        letter-spacing: 2px
+
+    &__description
+        font-family: 'roboto serif', sans-serif
+        line-height: 32px
+
+    &__link-wrapper
+        display: block
+
+    &__link
+        display: inline-block
+        @include useColor('color', 'accent')
+        &:hover
+            @include useColor('color', 'accent--active')
+
+    &__tech
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap

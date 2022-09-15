@@ -1,0 +1,39 @@
+*
+    box-sizing: border-box
+    font-family: roboto, sans-serif
+    padding: 0
+    margin: 0
+    outline: none
+    background: transparent
+    font-size: 1.6rem
+    list-style: none
+    text-decoration: none
+    border: none
+    color: inherit
+    -ms-overflow-style: none
+    scrollbar-width: none
+    
+::-webkit-scrollbar
+    width: 12px
+    
+    @include media-query()
+        display: none
+    
+::-webkit-scrollbar-thumb
+    @include elevation(2)
+    border-radius: 5px
+    box-shadow: 5px 5px 15px rgba(0,0,0, .3)
+    
+html
+    font-size: 62.5%
+    @include elevation(0)
+    @include useColor('color', 'main')
+    overflow: hidden
+
+body 
+    font-size: 1.6rem
+    overflow: hidden
+    padding: 0 1rem
+
+button, a 
+    cursor: pointer

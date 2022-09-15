@@ -1,0 +1,10 @@
+<div class="tech-stack tech-stack--{{size}}">
+    <div class="tech-stack__category ts-category" *ngFor="let cat of items">
+        <h3 class="ts-category__name">{{cat.name}}</h3>
+        <ul class="ts-category__items">
+            <li *ngFor="let item of cat.items">
+                <app-tech-stack-item [item]="item"></app-tech-stack-item>
+            </li>
+        </ul>
+    </div>
+</div>

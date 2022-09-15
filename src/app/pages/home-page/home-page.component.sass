@@ -1,0 +1,29 @@
+@import sass/imports
+    
+
+.about-me
+    margin-top: 6rem
+
+    &__title
+        @include media-query()
+            display: none
+
+
+    &__image
+        max-width: 25rem
+        max-height: 25rem
+        margin-right: 5rem
+
+        & > img
+            height: 100%
+            width: 100%
+            border-radius: 50%
+            box-shadow: 5px 5px 15px rgba(0,0,0,.3)
+
+        @include media-query()
+            margin-right: 0
+            max-width: 15rem
+
+    &__content
+        margin-top: 7rem
+        width: 100%
