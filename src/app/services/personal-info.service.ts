@@ -10,8 +10,17 @@ export class PersonalInfoService {
   getWorkingExperiences(): ChronologicalListItem[] {
     return [
       {
+        from: '2023',
+        to: 'Today',
+        primaryText: 'Software Engineer',
+        secondaryText: 'corner4 Information Technology GmbH (Traun)',
+        icon: 'assets/software.svg',
+        size: 'full',
+        details: undefined
+      },
+      {
         from: '2017',
-        to: 'today',
+        to: '2023',
         primaryText: 'Full-Stack Developer',
         secondaryText: 'xxxldigital - Part of XXXLGroup KG (Wels/Linz)',
         icon: 'assets/software.svg',
