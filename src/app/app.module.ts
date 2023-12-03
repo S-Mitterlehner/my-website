@@ -25,6 +25,9 @@ import { TechStackItemSmallComponent } from './components/tech-stack-item-small/
 import { ImprintPageComponent } from './pages/imprint-page/imprint-page.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { YearAmountPipe } from './pipes/year-amount.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
+import { LanguageSelectionComponent } from './components/language-selection/language-selection.component';
 
 @NgModule({
   declarations: [
@@ -48,12 +51,15 @@ import { YearAmountPipe } from './pipes/year-amount.pipe';
     ImprintPageComponent,
     PopupComponent,
     YearAmountPipe,
+    LanguageSelectionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
+    HttpClientModule,
+    TranslocoRootModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,17 +1,20 @@
-<h3>Hello!</h3>
+<h3>{{ "introduction.greeting" | transloco }}</h3>
 <p>
-  My name is Stefan, I'm a {{ { year: 1996, month: 3 } | yearAmount }} year old
-  professional software engineer for over
-  {{ { year: 2017, month: 5 } | yearAmount }} years.
+  {{
+    "introduction.intro"
+      | transloco
+        : {
+            age: { year: 1996, month: 3 } | yearAmount,
+            experience: { year: 2017, month: 5 } | yearAmount
+          }
+  }}
 </p>
 <p>
-  In those years I gained lots of experience in different areas of software
-  development, including C#/.NET, Angular and React. My main focus is no web
-  development (full stack), but I also have experience in desktop development
-  with WPF. I'm also very interested in software architecture and design, but
-  also recent developments in generative AI.
+  {{ "introduction.main" | transloco }}
 </p>
-<p>If you have any question or interest, please feel free to contact me!</p>
+<p>
+  {{ "introduction.end" | transloco }}
+</p>
 
 <div class="social-media">
   <app-social-media-button

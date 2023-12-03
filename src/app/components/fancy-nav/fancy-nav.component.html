@@ -1,13 +1,15 @@
 <nav class="nav nav--fancy">
   <ul class="nav__list">
     <li class="nav__item">
-      <a class="nav__link" [routerLink]="''">About Me</a>
+      <a class="nav__link" [routerLink]="''">
+        {{ "nav.about-me" | transloco }}
+      </a>
       <ul class="nav-sub" [@listAnimation]="getAboutMeRoutes().length">
         @for (item of getAboutMeRoutes(); track item.route) {
         <li class="nav-sub__item nav-sub__item--{{ $index }}">
           @if(showAboutMeSub){
           <a class="nav__link" [routerLink]="item.route">
-            {{ item.text }}
+            {{ "nav." + item.route | transloco }}
           </a>
           }
         </li>
@@ -15,12 +17,18 @@
       </ul>
     </li>
     <li class="nav__item">
-      <a class="nav__link" [routerLink]="'references'">References</a>
+      <a class="nav__link" [routerLink]="'references'">
+        {{ "nav.references" | transloco }}
+      </a>
     </li>
     @if (false){
     <li class="nav__item nav__item--small">
-      <a class="nav__link" [routerLink]="'imprint'">Imprint</a>
+      <a class="nav__link" [routerLink]="'imprint'">
+        {{ "nav.imprint" | transloco }}
+      </a>
     </li>
     }
+    <li class="nav__item nav__item--lang"></li>
   </ul>
+  <app-language-selection class="lang"></app-language-selection>
 </nav>

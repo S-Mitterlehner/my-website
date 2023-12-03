@@ -7,7 +7,9 @@
     {{ hero.description }}
     @if(hero.link !== undefined) {
     <span class="hero__link-wrapper">
-      <a class="hero__link" href="{{ hero.link }}" target="_blank">show me!</a>
+      <a class="hero__link" href="{{ hero.link }}" target="_blank">
+        {{ "hero.show" | transloco }}
+      </a>
     </span>
     }
   </span>

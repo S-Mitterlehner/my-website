@@ -1,0 +1,14 @@
+{
+  "introduction.greeting": "Hallo!",
+  "introduction.intro": "Mein Name ist Stefan und ich bin ein {{age}} Jahre alter Software Entwickler aus Leonding, Österreich seit {{experience}} Jahren.",
+  "introduction.main": "In dieser Zeit konnte ich bereits einige Erfahrungen in verschiedenen Bereichen der Software Entwicklung, einschließlich C#/.NET, Angular und React, sammeln. Mein Hauptfokus liegt im Bereich der Web-Entwicklung (Full-Stack), aber ich habe auch Erfahrungen in der Desktop-Entwicklung mit WPF. Außerdem bin ich sehr interessiert an Software Architektur und Design, aber auch in den neuesten Entwicklungen generativer KIs.",
+  "introduction.end": "Haben Sie Fragen oder Interesse? Dann freue ich mich auf Ihre Nachricht.",
+  "hero.show": "Anzeigen",
+  "nav.home": "Home",
+  "nav.about-me": "Über mich",
+  "nav.tech-stack": "Tech Stack",
+  "nav.experiences": "Berufserfahrung",
+  "nav.education": "Ausbildung",
+  "nav.references": "Referenzen",
+  "nav.imprint": "Impressum"
+}

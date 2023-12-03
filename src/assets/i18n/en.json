@@ -1,0 +1,14 @@
+{
+  "introduction.greeting": "Hello!",
+  "introduction.intro": "My name is Stefan. I'm a {{age}} year old professional software engineer from Leonding, Austria for over {{experience}} years.",
+  "introduction.main": "In those years I gained lots of experience in different areas of software development, including C#/.NET, Angular and React. My main focus is web development (full stack), but I also have experience in desktop development with WPF. I'm also very interested in software architecture and design, but also recent developments in generative AI.",
+  "introduction.end": "If you have any question or interest, please feel free to contact me!",
+  "hero.show": "Show me!",
+  "nav.home": "Home",
+  "nav.about-me": "About Me",
+  "nav.tech-stack": "Tech Stack",
+  "nav.experiences": "Experiences",
+  "nav.education": "Education",
+  "nav.references": "References",
+  "nav.imprint": "Imprint"
+}

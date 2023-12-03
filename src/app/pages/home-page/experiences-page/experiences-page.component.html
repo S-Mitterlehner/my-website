@@ -1,4 +1,7 @@
 <div class="sub-page">
-    <h2 class="sub-title">Experiences</h2>
-    <app-chronological-list [items]="workingExperiences" [allowDetails]="true"></app-chronological-list>
+  <h2 class="sub-title">{{ "nav.experiences" | transloco }}</h2>
+  <app-chronological-list
+    [items]="workingExperiences"
+    [allowDetails]="true"
+  ></app-chronological-list>
 </div>
