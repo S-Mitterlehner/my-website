@@ -1,21 +1,32 @@
 <ul class="chrono-list" [@listAnimation]="itemList.length">
-    <li class="chrono-list__item" *ngFor="let i of itemList">
-        <div class="chrono-item chrono-item--{{i.size}}">
-            <span class="chrono-item__icon">
-                <img [src]="i.icon">
-            </span>
-            <span class="chrono-item__years">{{getYearString(i)}}</span>
-            <span class="chrono-item__primary-text">{{i.primaryText}}</span>
-            <span class="chrono-item__secondary-text">{{i.secondaryText}}</span>
-            <span class="chrono-item__details" *ngIf="allowDetails">
-                <button class="chrono-item__detail-button arrow-button" *ngIf="i.details !== undefined" (click)="showDetails(i.details)"></button>
-            </span>
-        </div>
-    </li>
-</ul>  
+  @for (i of itemList; track i.primaryText) {
+  <li class="chrono-list__item">
+    <div class="chrono-item chrono-item--{{ i.size }}">
+      <span class="chrono-item__icon">
+        <img [src]="i.icon" />
+      </span>
+      <span class="chrono-item__years">{{ getYearString(i) }}</span>
+      <span class="chrono-item__primary-text">{{ i.primaryText }}</span>
+      <span class="chrono-item__secondary-text">{{ i.secondaryText }}</span>
+      @if (allowDetails && i.details !== undefined){
+      <span class="chrono-item__details">
+        <button
+          class="chrono-item__detail-button arrow-button"
+          (click)="showDetails(i.details)"
+        ></button>
+      </span>
+      }
+    </div>
+  </li>
+  }
+</ul>
 <!--TODO:Animate out-->
 <app-popup titleText="Tasks" (closeRequested)="closePopup()" *ngIf="showPopup">
-    <ul class="chrono-detail">
-        <li class="chrono-detail__item" *ngFor="let item of detail?.tasks">{{item}}</li>
-    </ul>
+  <ul class="chrono-detail">
+    @for (item of detail?.tasks; track item) {
+    <li class="chrono-detail__item">
+      {{ item }}
+    </li>
+    }
+  </ul>
 </app-popup>

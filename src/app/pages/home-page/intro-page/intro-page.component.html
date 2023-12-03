@@ -1,7 +1,8 @@
 <h3>Hello!</h3>
 <p>
-  My name is Stefan, I'm a {{ getYearAmount(1996, 3) }} year old professional
-  software engineer for over {{ getYearAmount(2017, 5) }} years.
+  My name is Stefan, I'm a {{ { year: 1996, month: 3 } | yearAmount }} year old
+  professional software engineer for over
+  {{ { year: 2017, month: 5 } | yearAmount }} years.
 </p>
 <p>
   In those years I gained lots of experience in different areas of software
@@ -29,7 +30,4 @@
     [url]="'mailto:office@mitterlehner.click'"
     [type]="'mail'"
   ></app-social-media-button>
-</div>
-<div class="contact-form">
-  <app-contact-form></app-contact-form>
 </div>

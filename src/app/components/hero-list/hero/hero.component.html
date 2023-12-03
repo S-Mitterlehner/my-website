@@ -1,15 +1,19 @@
-<div class="hero hero--{{orientation}}">
-    <div class="hero__image">
-        <img src="{{hero.imagePath}}" alt="{{hero.title}}">
-    </div>
-    <span class="hero__title">{{hero.title}}</span>
-    <span class="hero__description">
-        {{hero.description}}
-        <span class="hero__link-wrapper" *ngIf="hero.link !== undefined">
-            <a class="hero__link" href="{{hero.link}}" target="_blank" >show me!</a>
-        </span>
+<div class="hero hero--{{ orientation }}">
+  <div class="hero__image">
+    <img src="{{ hero.imagePath }}" alt="{{ hero.title }}" />
+  </div>
+  <span class="hero__title">{{ hero.title }}</span>
+  <span class="hero__description">
+    {{ hero.description }}
+    @if(hero.link !== undefined) {
+    <span class="hero__link-wrapper">
+      <a class="hero__link" href="{{ hero.link }}" target="_blank">show me!</a>
     </span>
-    <div class="hero__tech">
-        <app-tech-stack-item-small [item]="tech" *ngFor="let tech of hero.tech"></app-tech-stack-item-small>
-    </div>
+    }
+  </span>
+  <div class="hero__tech">
+    @for (tech of hero.tech; track tech) {
+    <app-tech-stack-item-small [item]="tech"></app-tech-stack-item-small>
+    }
+  </div>
 </div>

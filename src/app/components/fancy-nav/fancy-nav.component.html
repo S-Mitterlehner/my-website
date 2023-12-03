@@ -1,19 +1,26 @@
 <nav class="nav nav--fancy">
-    <ul class="nav__list">
-        <li class="nav__item">
-            <a class="nav__link" [routerLink]="''">About Me</a>
-            <ul class="nav-sub" 
-                [@listAnimation]="getAboutMeRoutes().length" >
-                <li class="nav-sub__item nav-sub__item--{{i}}" *ngFor="let item of getAboutMeRoutes(); let i = index">
-                    <a class="nav__link" [routerLink]="item.route" *ngIf="showAboutMeSub">{{item.text}}</a>
-                </li>
-            </ul>
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" [routerLink]="''">About Me</a>
+      <ul class="nav-sub" [@listAnimation]="getAboutMeRoutes().length">
+        @for (item of getAboutMeRoutes(); track item.route) {
+        <li class="nav-sub__item nav-sub__item--{{ $index }}">
+          @if(showAboutMeSub){
+          <a class="nav__link" [routerLink]="item.route">
+            {{ item.text }}
+          </a>
+          }
         </li>
-        <li class="nav__item">
-            <a class="nav__link" [routerLink]="'references'">References</a>
-        </li>
-        <li class="nav__item nav__item--small" *ngIf="false">
-            <a class="nav__link" [routerLink]="'imprint'">Imprint</a>
-        </li>
-    </ul>
+        }
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a class="nav__link" [routerLink]="'references'">References</a>
+    </li>
+    @if (false){
+    <li class="nav__item nav__item--small">
+      <a class="nav__link" [routerLink]="'imprint'">Imprint</a>
+    </li>
+    }
+  </ul>
 </nav>

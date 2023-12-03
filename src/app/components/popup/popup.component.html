@@ -1,8 +1,10 @@
 <div class="backdrop backdrop--full" (click)="requestClose()"></div>
 <div class="popup">
-    <span class="popup__title" *ngIf="titleText !== undefined">{{titleText}}</span>
-    <button class="popup__close" (click)="requestClose()"></button>
-    <div class="popup__content">
-        <ng-content></ng-content>
-    </div>
+  @if (titleText !== undefined) {
+  <span class="popup__title">{{ titleText }}</span>
+  }
+  <button class="popup__close" (click)="requestClose()"></button>
+  <div class="popup__content">
+    <ng-content></ng-content>
+  </div>
 </div>
