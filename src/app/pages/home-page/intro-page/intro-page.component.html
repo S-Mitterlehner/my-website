@@ -1,19 +1,35 @@
 <h3>Hello!</h3>
 <p>
-    My name is Stefan, I'm {{getYearAmount(1996, 3)}} years old and I've been a professional software engineer for over {{getYearAmount(2017, 5)}} years.
+  My name is Stefan, I'm a {{ getYearAmount(1996, 3) }} year old professional
+  software engineer for over {{ getYearAmount(2017, 5) }} years.
 </p>
 <p>
-    In those years I gained a lot experiences in software development and architecture with a variety of technologies including C# .NET, Angular and React. I've build a lot of services, applications and websites from backend to frontend used by over 20.000 people in many different countries.
+  In those years I gained lots of experience in different areas of software
+  development, including C#/.NET, Angular and React. My main focus is no web
+  development (full stack), but I also have experience in desktop development
+  with WPF. I'm also very interested in software architecture and design, but
+  also recent developments in generative AI.
 </p>
-<p>
-    If you have any question or interest, please feel free to contact me!
-</p>
-
+<p>If you have any question or interest, please feel free to contact me!</p>
 
 <div class="social-media">
-    <app-social-media-button [url]="'https://www.linkedin.com/in/stefan-mitterlehner-8a1494163/'" [type]="'linked-in'"></app-social-media-button>
-    <app-social-media-button [url]="'https://www.xing.com/profile/Stefan_Mitterlehner/'" [type]="'xing'"></app-social-media-button>
-    <app-social-media-button [url]="'https://twitter.com/FullStackStefan'" [type]="'twitter'"></app-social-media-button>
-    <app-social-media-button [url]="'mailto:office@mitterlehner.click'" [type]="'mail'"></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://www.linkedin.com/in/stefan-mitterlehner-8a1494163/'"
+    [type]="'linked-in'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://www.xing.com/profile/Stefan_Mitterlehner/'"
+    [type]="'xing'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://twitter.com/FullStackStefan'"
+    [type]="'twitter'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'mailto:office@mitterlehner.click'"
+    [type]="'mail'"
+  ></app-social-media-button>
 </div>
-
+<div class="contact-form">
+  <app-contact-form></app-contact-form>
+</div>
