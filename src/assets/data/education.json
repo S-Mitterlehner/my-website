@@ -1,0 +1,34 @@
+[
+  {
+    "from": "2021",
+    "to": "2024",
+    "primaryText": "education.bachelor.primary",
+    "secondaryText": "education.bachelor.secondary",
+    "icon": "assets/university.svg",
+    "size": "full"
+  },
+  {
+    "from": "2020",
+    "to": "2021",
+    "primaryText": "education.sbl.primary",
+    "secondaryText": "education.sbl.secondary",
+    "icon": "assets/university.svg",
+    "size": "full"
+  },
+  {
+    "from": "2013",
+    "to": "2017",
+    "primaryText": "education.apprenticeship.primary",
+    "secondaryText": "education.apprenticeship.secondary",
+    "icon": "assets/apprenticeship.svg",
+    "size": "small"
+  },
+  {
+    "from": "2010",
+    "to": "2013",
+    "primaryText": "education.htl.primary",
+    "secondaryText": "education.htl.secondary",
+    "icon": "assets/htl.svg",
+    "size": "small"
+  }
+]

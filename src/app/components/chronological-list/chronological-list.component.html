@@ -6,8 +6,12 @@
         <img [src]="i.icon" />
       </span>
       <span class="chrono-item__years">{{ getYearString(i) }}</span>
-      <span class="chrono-item__primary-text">{{ i.primaryText }}</span>
-      <span class="chrono-item__secondary-text">{{ i.secondaryText }}</span>
+      <span class="chrono-item__primary-text">
+        {{ i.primaryText | transloco }}
+      </span>
+      <span class="chrono-item__secondary-text">
+        {{ i.secondaryText | transloco }}
+      </span>
       @if (allowDetails && i.details !== undefined){
       <span class="chrono-item__details">
         <button
@@ -25,7 +29,7 @@
   <ul class="chrono-detail">
     @for (item of detail?.tasks; track item) {
     <li class="chrono-detail__item">
-      {{ item }}
+      {{ item | transloco }}
     </li>
     }
   </ul>

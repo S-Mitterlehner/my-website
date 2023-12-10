@@ -1,0 +1,84 @@
+[
+  {
+    "name": "Frontend",
+    "items": [
+      {
+        "name": "Angular 12+",
+        "icon": "assets/tech/angular.svg",
+        "since": "2020-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "assets/tech/ts.svg",
+        "since": "2020-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "SASS",
+        "icon": "assets/tech/sass.svg",
+        "since": "2020-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "ASP.NET",
+        "icon": "assets/tech/aspnet.svg",
+        "since": "2017-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "WPF",
+        "icon": "assets/tech/wpf.png",
+        "since": "2017-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "assets/tech/js.svg",
+        "since": "2017-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "CSS",
+        "icon": "assets/tech/css.svg",
+        "since": "2017-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "HTML",
+        "icon": "assets/tech/html.svg",
+        "since": "2017-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "React",
+        "icon": "assets/tech/react.svg",
+        "since": "2019-01-01",
+        "level": "ADVANCED"
+      }
+    ]
+  },
+  {
+    "name": "Backend",
+    "items": [
+      {
+        "name": "C#",
+        "icon": "assets/tech/csharp.svg",
+        "since": "2015-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": ".NET",
+        "icon": "assets/tech/net.svg",
+        "since": "2015-01-01",
+        "level": "PRO"
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "icon": "assets/tech/mssql.svg",
+        "since": "2017-01-01",
+        "level": "PRO"
+      }
+    ]
+  }
+]

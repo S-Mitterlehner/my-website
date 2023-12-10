@@ -1,0 +1,45 @@
+[
+  {
+    "from": "2023",
+    "to": "TODAY",
+    "primaryText": "experience.corner4.primary",
+    "secondaryText": "corner4 Information Technology GmbH (Traun)",
+    "icon": "assets/software.svg",
+    "size": "full"
+  },
+  {
+    "from": "2017",
+    "to": "2023",
+    "primaryText": "experience.xxxl.primary",
+    "secondaryText": "xxxldigital - Part of XXXLGroup KG (Wels/Linz)",
+    "icon": "assets/software.svg",
+    "size": "full",
+    "details": {
+      "tasks": [
+        "experience.xxxl.tasks.1",
+        "experience.xxxl.tasks.2",
+        "experience.xxxl.tasks.3",
+        "experience.xxxl.tasks.4",
+        "experience.xxxl.tasks.5"
+      ]
+    }
+  },
+  {
+    "from": "2013",
+    "to": "2017",
+    "primaryText": "experience.hainzl.primary",
+    "secondaryText": "Hainzl Industriesysteme (Linz)",
+    "icon": "assets/electricity.svg",
+    "size": "full"
+  },
+  {
+    "from": "2012",
+    "primaryText": "experience.keba.primary",
+    "secondaryText": "KEBA (Linz)",
+    "icon": "assets/hardware.svg",
+    "size": "full",
+    "details": {
+      "tasks": ["experience.keba.tasks.1", "experience.keba.tasks.2"]
+    }
+  }
+]
