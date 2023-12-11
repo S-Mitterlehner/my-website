@@ -29,6 +29,9 @@ export class SocialMediaButtonComponent implements OnChanges {
         case SocialMediaChannels.Email:
           this.text.set('E-Mail');
           break;
+        case SocialMediaChannels.GitHub:
+          this.text.set('GitHub');
+          break;
         default:
           throw new Error('undefined social-media type');
       }
@@ -41,4 +44,5 @@ export enum SocialMediaChannels {
   XING = 'xing',
   Twitter = 'twitter',
   Email = 'mail',
+  GitHub = 'github',
 }
