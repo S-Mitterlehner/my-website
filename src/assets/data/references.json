@@ -1,0 +1,54 @@
+[
+  {
+    "title": "references.timetracker.title",
+    "description": "references.timetracker.description",
+    "link": "https://marketplace.visualstudio.com/items?itemName=S-Mitterlehner.time-tracker-vscode",
+    "imagePath": "assets/references/time-tracker-vscode.png",
+    "tech": [{ "name": "TypeScript", "icon": "assets/tech/ts.svg" }]
+  },
+  {
+    "title": "references.trafik.title",
+    "description": "references.trafik.description",
+    "imagePath": "assets/references/trafik.jpg",
+    "link": "https://www.trafik-mitterlehner.at/",
+    "tech": [{ "name": "Angular", "icon": "assets/tech/angular.svg" }]
+  },
+  {
+    "title": "references.pim.title",
+    "description": "references.pim.description",
+    "imagePath": "assets/references/placeholder.png",
+    "tech": [
+      { "name": "C#", "icon": "assets/tech/csharp.svg" },
+      { "name": "WPF", "icon": "assets/tech/wpf.png" },
+      { "name": "Microsoft SQL", "icon": "assets/tech/mssql.svg" }
+    ]
+  },
+  {
+    "title": "references.phonebook.title",
+    "description": "references.phonebook.description",
+    "imagePath": "assets/references/placeholder.png",
+    "tech": [
+      { "name": "Angular", "icon": "assets/tech/angular.svg" },
+      { "name": "C#", "icon": "assets/tech/csharp.svg" },
+      { "name": "ASP.NET", "icon": "assets/tech/aspnet.svg" },
+      { "name": "Microsoft SQL", "icon": "assets/tech/mssql.svg" }
+    ]
+  },
+  {
+    "title": "references.portfolio.title",
+    "description": "references.portfolio.description",
+    "imagePath": "assets/references/portfolio.jpg",
+    "tech": [{ "name": "Angular", "icon": "assets/tech/angular.svg" }]
+  },
+  {
+    "title": "references.inmemoriam.title",
+    "description": "references.inmemoriam.description",
+    "imagePath": "assets/references/memoriam.jpg",
+    "link": "https://christian.mitterlehner.click/",
+    "tech": [
+      { "name": "HTML", "icon": "assets/tech/html.svg" },
+      { "name": "CSS", "icon": "assets/tech/css.svg" },
+      { "name": "JavaScript", "icon": "assets/tech/js.svg" }
+    ]
+  }
+]

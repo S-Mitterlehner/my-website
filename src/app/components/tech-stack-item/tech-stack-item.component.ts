@@ -1,26 +1,28 @@
-import { Component, Input } from '@angular/core';
-import { KnowledgeLevel, TechItem, TechStackItem } from '../../models/tech-stack-item.model';
+import { Component, Input, OnChanges } from '@angular/core';
+import {
+  KnowledgeLevel,
+  TechItem,
+  TechStackItem,
+} from '../../models/tech-stack-item.model';
+import { SimpleChanges } from '@angular/core';
+import { signal } from '@angular/core';
 
 @Component({
   selector: 'app-tech-stack-item',
   templateUrl: './tech-stack-item.component.html',
-  styleUrls: ['./tech-stack-item.component.sass']
+  styleUrls: ['./tech-stack-item.component.sass'],
 })
-export class TechStackItemComponent {
+export class TechStackItemComponent implements OnChanges {
   @Input() item!: TechStackItem;
   isTooltipVisible = false;
   tooltipActivated = false;
 
-  getExperience(): string {
-    const duration = new Date().getFullYear() - this.item.since.getFullYear();
-    return '+' + duration + ' years';
-  }
+  experience = signal('');
 
-  getLevel(): string {
-    switch(this.item.level) {
-      case KnowledgeLevel.BEGINNER: return 'Beginner';
-      case KnowledgeLevel.ADVANCED: return 'Advanced';
-      case KnowledgeLevel.PRO: return 'Pro';
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['item']) {
+      const duration = new Date().getFullYear() - this.item.since.getFullYear();
+      this.experience.set('+' + duration + ' years');
     }
   }
 

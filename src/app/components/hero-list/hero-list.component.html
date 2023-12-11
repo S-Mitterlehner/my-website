@@ -1,5 +1,10 @@
 <ul class="hero-list" [@listAnimation]="items.length">
-    <li *ngFor="let hero of items; let i = index">
-        <app-hero [hero]="hero" [orientation]="i % 2 == 1 ? 'left':'right'"></app-hero>
-    </li>
+  @for (hero of items; track hero) {
+  <li>
+    <app-hero
+      [hero]="hero"
+      [orientation]="$index % 2 == 1 ? 'left' : 'right'"
+    ></app-hero>
+  </li>
+  }
 </ul>

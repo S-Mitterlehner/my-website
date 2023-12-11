@@ -1,0 +1,52 @@
+{
+  "introduction.greeting": "Hallo!",
+  "introduction.intro": "Mein Name ist Stefan und ich bin ein {{age}} Jahre alter Software Entwickler aus Leonding, Österreich seit {{experience}} Jahren.",
+  "introduction.main": "In dieser Zeit konnte ich bereits einige Erfahrungen in verschiedenen Bereichen der Software Entwicklung, einschließlich C#/.NET, Angular und React, sammeln. Mein Hauptfokus liegt im Bereich der Web-Entwicklung (Full-Stack), aber ich habe auch Erfahrungen in der Desktop-Entwicklung mit WPF. Außerdem bin ich sehr interessiert an Software Architektur und Design, aber auch in den neuesten Entwicklungen generativer KIs.",
+  "introduction.end": "Haben Sie Fragen oder Interesse? Dann freue ich mich auf Ihre Nachricht.",
+  "hero.show": "Anzeigen",
+  "nav.home": "Home",
+  "nav.about-me": "Über mich",
+  "nav.tech-stack": "Tech Stack",
+  "nav.experiences": "Berufserfahrung",
+  "nav.education": "Ausbildung",
+  "nav.references": "Referenzen",
+  "nav.imprint": "Impressum",
+  "general.today": "Heute",
+  "education": {
+    "bachelor.primary": "Software Engineering - Berufsbegleitend",
+    "bachelor.secondary": "FH Hagenberg",
+    "sbl.primary": "Studienbefähigungslehrgang",
+    "sbl.secondary": "FH Wels",
+    "apprenticeship.primary": "Lehre Elektrotechnik - Gebäudetechnik",
+    "apprenticeship.secondary": "Hainzl Industriesysteme GmbH",
+    "htl.primary": "Elektronik",
+    "htl.secondary": "HTBLA Leonding"
+  },
+  "experience": {
+    "corner4.primary": "Software Ingineur",
+    "xxxl.primary": "Full-Stack Entwickler",
+    "tasks.1": "Konzipierung und planung von Projekten basierend auf Business Anforderungen (aber auch anderen Entwicklern)",
+    "tasks.2": "Entwicklung neuer Features",
+    "tasks.3": "Performance Analyse und Optimierung",
+    "tasks.4": "Bugfixing / 3rd Level Support",
+    "tasks.5": "Code Reviews / Buddy für neue Kollegen",
+    "hainzl.primary": "Elektriker Gebäudetechnik",
+    "keba.primary": "Praktikum Hardware/Software Entwicklung",
+    "keba.tasks.1": "Bauen eines kleinen Test-Roboters für Klick-Tests",
+    "keba.tasks.2": "Implementierung einer Management Konsole für den Roboter"
+  },
+  "references": {
+    "timetracker.title": "Time Tracker für VS Code",
+    "timetracker.description": "Aufzeichnen der Arbeitszeit mit Speicherung im Repository direkt aus VS Code",
+    "trafik.title": "Website: Trafik Mitterlehner",
+    "trafik.description": "Online Präsenz für \"Trafik Mitterlehner\"",
+    "pim.title": "Product Information Management System",
+    "pim.description": "Viele Erweiterungen des PIM-Systems eines großen österreichischen Unternehmens, inklusive Massenänderungstool und einem generischen Exporter.",
+    "phonebook.title": "Telefonbuch",
+    "phonebook.description": "Internes Telefonbuch für ein großes österreichisches Unternehmen, inklusive Mitarbeiter-, Filial- und Lagerdaten und Übersetzung in mehrere Sprachen.",
+    "portfolio.title": "Mein Portfolio",
+    "portfolio.description": "Diese Website ;)",
+    "inmemoriam.title": "In Memoriam: Christian Mitterlehner",
+    "inmemoriam.description": "Gedenkseite für meinen Vater, welcher 2018 verstorben ist."
+  }
+}

@@ -1,19 +1,40 @@
-<h3>Hello!</h3>
+<h3>{{ "introduction.greeting" | transloco }}</h3>
 <p>
-    My name is Stefan, I'm {{getYearAmount(1996, 3)}} years old and I've been a professional software engineer for over {{getYearAmount(2017, 5)}} years.
+  {{
+    "introduction.intro"
+      | transloco
+        : {
+            age: { year: 1996, month: 3 } | yearAmount,
+            experience: { year: 2017, month: 5 } | yearAmount
+          }
+  }}
 </p>
 <p>
-    In those years I gained a lot experiences in software development and architecture with a variety of technologies including C# .NET, Angular and React. I've build a lot of services, applications and websites from backend to frontend used by over 20.000 people in many different countries.
+  {{ "introduction.main" | transloco }}
 </p>
 <p>
-    If you have any question or interest, please feel free to contact me!
+  {{ "introduction.end" | transloco }}
 </p>
-
 
 <div class="social-media">
-    <app-social-media-button [url]="'https://www.linkedin.com/in/stefan-mitterlehner-8a1494163/'" [type]="'linked-in'"></app-social-media-button>
-    <app-social-media-button [url]="'https://www.xing.com/profile/Stefan_Mitterlehner/'" [type]="'xing'"></app-social-media-button>
-    <app-social-media-button [url]="'https://twitter.com/FullStackStefan'" [type]="'twitter'"></app-social-media-button>
-    <app-social-media-button [url]="'mailto:office@mitterlehner.click'" [type]="'mail'"></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://www.linkedin.com/in/stefan-mitterlehner-8a1494163/'"
+    [type]="'linked-in'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://github.com/S-Mitterlehner'"
+    [type]="'github'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://www.xing.com/profile/Stefan_Mitterlehner/'"
+    [type]="'xing'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'https://twitter.com/FullStackStefan'"
+    [type]="'twitter'"
+  ></app-social-media-button>
+  <app-social-media-button
+    [url]="'mailto:office@mitterlehner.click'"
+    [type]="'mail'"
+  ></app-social-media-button>
 </div>
-

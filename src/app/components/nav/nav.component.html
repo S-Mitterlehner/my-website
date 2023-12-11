@@ -1,18 +1,40 @@
 <nav class="nav">
-    <ul class="nav__list">
-        <li class="nav__item">
-            <a class="nav__link" [routerLink]="''" (click)="itemClicked.emit()">Home</a>
-            <ul class="nav__sublist">
-                <li class="nav__sub-item" *ngFor="let r of menuService.getAboutMeRoutes()">
-                    <a class="nav__link" [routerLink]="r.route" (click)="itemClicked.emit()">{{r.text}}</a>
-                </li>
-            </ul>
+  <ul class="nav__list">
+    <li class="nav__item">
+      <a class="nav__link" [routerLink]="''" (click)="itemClicked.emit()">
+        {{ "nav.home" | transloco }}
+      </a>
+      <ul class="nav__sublist">
+        @for (r of menuService.getAboutMeRoutes(); track r) {
+        <li class="nav__sub-item">
+          <a
+            class="nav__link"
+            [routerLink]="r.route"
+            (click)="itemClicked.emit()"
+            >{{ "nav." + r.route | transloco }}</a
+          >
         </li>
-        <li class="nav__item">
-            <a class="nav__link" [routerLink]="'references'" (click)="itemClicked.emit()">Referenzen</a>
-        </li>
-        <li class="nav__item">
-            <a class="nav__link nav__link--small" [routerLink]="'imprint'" (click)="itemClicked.emit()">Impressum</a>
-        </li>
-    </ul>
+        }
+      </ul>
+    </li>
+    <li class="nav__item">
+      <a
+        class="nav__link"
+        [routerLink]="'references'"
+        (click)="itemClicked.emit()"
+      >
+        {{ "nav.references" | transloco }}
+      </a>
+    </li>
+    <li class="nav__item">
+      <a
+        class="nav__link nav__link--small"
+        [routerLink]="'imprint'"
+        (click)="itemClicked.emit()"
+      >
+        {{ "nav.imprint" | transloco }}
+      </a>
+    </li>
+  </ul>
+  <app-language-selection></app-language-selection>
 </nav>

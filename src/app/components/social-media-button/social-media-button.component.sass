@@ -1,6 +1,14 @@
 @import sass/imports
+
+
+@mixin social-media-color($color)
+    --bg-color: #{$color}
+    --bg-color-hover: #{darken($color, 10%)}
+    
     
 .social-media-button
+    --bg-color: white
+    --bg-color-hover: white
     $self: &
     display: flex
     flex-direction: row
@@ -11,27 +19,25 @@
     min-width: 15rem
     max-width: 30rem
     margin: 1rem
-    
-    &--linked-in
-        background: #15ace5
+    background: var(--bg-color)
 
-        &:hover
-            background: darken(#15ace5, 10%)
+    &:hover
+        background: var(--bg-color-hover)
+
+    &--linked-in
+        @include social-media-color(#0077b5)
 
     &--xing
-        background: #20a5a5
-        &:hover
-            background: darken(#20a5a5, 10%)
+        @include social-media-color(#20a5a5)
 
     &--twitter
-        background: #23abff
-        &:hover
-            background: darken(#23abff, 10%)
+        @include social-media-color(#23abff)
 
     &--mail
-        background: #f4cd0b
-        &:hover
-            background: darken(#f4cd0b, 10%)
+        @include social-media-color(#f4cd0b)
+
+    &--github
+        @include social-media-color(rgb(13, 17, 23))
 
     &__icon
         display: flex

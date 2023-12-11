@@ -24,6 +24,10 @@ import { HeroComponent } from './components/hero-list/hero/hero.component';
 import { TechStackItemSmallComponent } from './components/tech-stack-item-small/tech-stack-item-small.component';
 import { ImprintPageComponent } from './pages/imprint-page/imprint-page.component';
 import { PopupComponent } from './components/popup/popup.component';
+import { YearAmountPipe } from './pipes/year-amount.pipe';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module';
+import { LanguageSelectionComponent } from './components/language-selection/language-selection.component';
 
 @NgModule({
   declarations: [
@@ -45,16 +49,19 @@ import { PopupComponent } from './components/popup/popup.component';
     HeroComponent,
     TechStackItemSmallComponent,
     ImprintPageComponent,
-    PopupComponent
-
+    PopupComponent,
+    YearAmountPipe,
+    LanguageSelectionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule    
+    MatIconModule,
+    HttpClientModule,
+    TranslocoRootModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

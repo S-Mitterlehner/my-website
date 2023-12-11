@@ -1,14 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { slideInFromLeft } from 'src/app/animations/slide-in';
-import { ChronologicalDetails, ChronologicalListItem } from '../../models/chronological-list-item.model';
+import {
+  ChronologicalDetails,
+  ChronologicalListItem,
+} from '../../models/chronological-list-item.model';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-chronological-list',
   templateUrl: './chronological-list.component.html',
   styleUrls: ['./chronological-list.component.sass'],
-  animations: [
-    slideInFromLeft
-  ]
+  animations: [slideInFromLeft],
 })
 export class ChronologicalListComponent implements OnInit {
   @Input() items!: ChronologicalListItem[];
@@ -17,6 +19,8 @@ export class ChronologicalListComponent implements OnInit {
   detail: ChronologicalDetails | undefined = undefined;
   showPopup: boolean = false;
 
+  constructor(private translator: TranslocoService) {}
+
   ngOnInit(): void {
     setTimeout(() => {
       this.itemList = this.items;
@@ -24,12 +28,20 @@ export class ChronologicalListComponent implements OnInit {
     }, 1000);
   }
 
-  getYearString(item: ChronologicalListItem ): string {
-    if(item.to === undefined) {
-      return item.from;
-    } 
+  getYearString(item: ChronologicalListItem): string {
+    let fromStr =
+      item.from === 'TODAY'
+        ? this.translator.translate('general.today')
+        : item.from;
+    if (item.to === undefined) {
+      return fromStr;
+    }
+    let toStr =
+      item.to === 'TODAY'
+        ? this.translator.translate('general.today')
+        : item.to;
 
-    return `${item.from} - ${item.to}`;
+    return `${fromStr} - ${toStr}`;
   }
 
   showDetails(details: ChronologicalDetails): void {
@@ -37,7 +49,7 @@ export class ChronologicalListComponent implements OnInit {
     this.showPopup = true;
   }
 
-  closePopup(){
+  closePopup() {
     this.showPopup = false;
     this.detail = undefined;
   }

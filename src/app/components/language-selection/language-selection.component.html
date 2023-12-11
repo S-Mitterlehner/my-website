@@ -1,0 +1,13 @@
+<div class="language-selection">
+  @for (lang of languages(); track lang.id) {
+  <button
+    class="language-selection__button"
+    [class.language-selection__button--active]="lang.id === activeLanguage"
+    (click)="setLanguage(lang.id)"
+  >
+    {{ lang.label }}
+  </button>
+  @if(!$last) {
+  <span class="language-selection__separator"></span>
+  } }
+</div>

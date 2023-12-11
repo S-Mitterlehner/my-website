@@ -1,0 +1,52 @@
+{
+  "introduction.greeting": "Hello!",
+  "introduction.intro": "My name is Stefan. I'm a {{age}} year old professional software engineer from Leonding, Austria for over {{experience}} years.",
+  "introduction.main": "In those years I gained lots of experience in different areas of software development, including C#/.NET, Angular and React. My main focus is web development (full stack), but I also have experience in desktop development with WPF. I'm also very interested in software architecture and design, but also recent developments in generative AI.",
+  "introduction.end": "If you have any question or interest, please feel free to contact me!",
+  "hero.show": "Show me!",
+  "nav.home": "Home",
+  "nav.about-me": "About Me",
+  "nav.tech-stack": "Tech Stack",
+  "nav.experiences": "Experiences",
+  "nav.education": "Education",
+  "nav.references": "References",
+  "nav.imprint": "Imprint",
+  "general.today": "today",
+  "education": {
+    "bachelor.primary": "Software Engineering - Part Time",
+    "bachelor.secondary": "University of Applied Sciences Hagenberg",
+    "sbl.primary": "Study Preparatory Programme",
+    "sbl.secondary": "University of Applied Sciences Wels",
+    "apprenticeship.primary": "Apprenticeship Electrotechnics (Building Technology)",
+    "apprenticeship.secondary": "Hainzl Industriesysteme GmbH",
+    "htl.primary": "Electronics",
+    "htl.secondary": "HTBLA Leonding"
+  },
+  "experience": {
+    "corner4.primary": "Software Engineer",
+    "xxxl.primary": "Full-Stack Developer",
+    "xxxl.tasks.1": "Conzeption and planning of projects from business requests (also for other developers)",
+    "xxxl.tasks.2": "Development of new features",
+    "xxxl.tasks.3": "Performance Analysis and Optimization",
+    "xxxl.tasks.4": "Bugfixing / 3rd Level Support",
+    "xxxl.tasks.5": "Code Reviews / Buddy for new employees",
+    "hainzl.primary": "Electrician (building technology)",
+    "keba.primary": "Internship Hardware/Software Development",
+    "keba.tasks.1": "Building a small test-robot for click-tests",
+    "keba.tasks.2": "Implementing a management console for the robot"
+  },
+  "references": {
+    "timetracker.title": "Time Tracker for VS Code",
+    "timetracker.description": "Track work time within the repository, directly from VS Code",
+    "trafik.title": "Website: Trafik Mitterlehner",
+    "trafik.description": "Online presence for \"Trafik Mitterlehner\"",
+    "pim.title": "Product Information Management",
+    "pim.description": "Many extensions of the product information system of a big austrian company, including a mass-change tool and a generic exporter",
+    "phonebook.title": "Phonebook",
+    "phonebook.description": "Internal Phonebook for a big austrian company, including employee-, store-, department data and translation.",
+    "portfolio.title": "My Portfolio",
+    "portfolio.description": "This website ;)",
+    "inmemoriam.title": "In Memoriam: Christian Mitterlehner",
+    "inmemoriam.description": "In Memoriam Page for my father who died 2018"
+  }
+}
