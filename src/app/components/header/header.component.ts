@@ -7,7 +7,7 @@ import { Themes, ThemeService } from '../../services/theme.service';
   styleUrls: ['./header.component.sass'],
 })
 export class HeaderComponent implements OnInit {
-  logoSource = input.required<string>();
+  logoSource = input<string>('');
   transparentBackgroundOnTop = input<boolean>(false);
   showLogo = input<boolean>(false);
 

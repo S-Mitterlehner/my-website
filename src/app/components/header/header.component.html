@@ -5,7 +5,7 @@
   <a [routerLink]="'/'" class="logo" (click)="isMenuOpen.set(false)">
     @if (showLogo()){
     <div class="logo__wrapper">
-      <img src="{{ logoSource }}" alt="logo" />
+      <img [src]="logoSource()" alt="logo" />
     </div>
     }
     <span class="logo__text">
