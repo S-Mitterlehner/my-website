@@ -1,10 +1,10 @@
 <a
-  class="social-media-button social-media-button--{{ type }}"
-  href="{{ url }}"
+  class="social-media-button social-media-button--{{ type() }}"
+  href="{{ url() }}"
   target="_blank"
 >
   <div class="social-media-button__icon">
-    <img src="assets/social-media/{{ type }}.svg" alt="{{ type }}" />
+    <img src="assets/social-media/{{ type() }}.svg" alt="{{ type() }}" />
   </div>
   <div class="social-media-button__text">
     {{ text() }}

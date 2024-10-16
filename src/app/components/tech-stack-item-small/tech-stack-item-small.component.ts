@@ -1,22 +1,22 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input, signal } from '@angular/core';
 import { TechItem } from 'src/app/models/tech-stack-item.model';
 
 @Component({
   selector: 'app-tech-stack-item-small',
   templateUrl: './tech-stack-item-small.component.html',
-  styleUrls: ['./tech-stack-item-small.component.sass']
+  styleUrls: ['./tech-stack-item-small.component.sass'],
 })
-export class TechStackItemSmallComponent{
-  @Input() item!: TechItem;
-  isTooltipVisible = false;
-  tooltipActivated = false;
+export class TechStackItemSmallComponent {
+  item = input.required<TechItem>();
+  isTooltipVisible = signal<boolean>(false);
+  tooltipActivated = signal<boolean>(false);
 
   setMouseOver(): void {
-    this.tooltipActivated = true;
-    this.isTooltipVisible = true;
+    this.tooltipActivated.set(true);
+    this.isTooltipVisible.set(true);
   }
 
   resetMouseOver(): void {
-    this.isTooltipVisible = false;
+    this.isTooltipVisible.set(false);
   }
 }

@@ -1,37 +1,27 @@
-import { Component, Input, OnChanges } from '@angular/core';
-import {
-  KnowledgeLevel,
-  TechItem,
-  TechStackItem,
-} from '../../models/tech-stack-item.model';
-import { SimpleChanges } from '@angular/core';
-import { signal } from '@angular/core';
+import { Component, computed, input, signal } from '@angular/core';
+import { TechStackItem } from '../../models/tech-stack-item.model';
 
 @Component({
   selector: 'app-tech-stack-item',
   templateUrl: './tech-stack-item.component.html',
   styleUrls: ['./tech-stack-item.component.sass'],
 })
-export class TechStackItemComponent implements OnChanges {
-  @Input() item!: TechStackItem;
-  isTooltipVisible = false;
-  tooltipActivated = false;
+export class TechStackItemComponent {
+  item = input.required<TechStackItem>();
+  isTooltipVisible = signal<boolean>(false);
+  tooltipActivated = signal<boolean>(false);
 
-  experience = signal('');
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['item']) {
-      const duration = new Date().getFullYear() - this.item.since.getFullYear();
-      this.experience.set('+' + duration + ' years');
-    }
-  }
+  experience = computed(() => {
+    const duration = new Date().getFullYear() - this.item().since.getFullYear();
+    return `+${duration} years`;
+  });
 
   setMouseOver(): void {
-    this.tooltipActivated = true;
-    this.isTooltipVisible = true;
+    this.tooltipActivated.set(true);
+    this.isTooltipVisible.set(true);
   }
 
   resetMouseOver(): void {
-    this.isTooltipVisible = false;
+    this.isTooltipVisible.set(false);
   }
 }

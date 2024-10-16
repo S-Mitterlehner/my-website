@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { slideInFromLeft } from 'src/app/animations/slide-in';
 import { HeroListItem } from 'src/app/models/hero-list-item.model';
 
@@ -6,10 +6,8 @@ import { HeroListItem } from 'src/app/models/hero-list-item.model';
   selector: 'app-hero-list',
   templateUrl: './hero-list.component.html',
   styleUrls: ['./hero-list.component.sass'],
-  animations: [
-    slideInFromLeft
-  ]
+  animations: [slideInFromLeft],
 })
 export class HeroListComponent {
-  @Input() items: HeroListItem[] = [];
+  items = input<HeroListItem[]>([]);
 }

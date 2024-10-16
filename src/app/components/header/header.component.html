@@ -1,9 +1,9 @@
 <header
   class="header"
-  [class.header--transparent]="transparentBackgroundOnTop && isTransparent"
+  [class.header--transparent]="transparentBackgroundOnTop() && isTransparent"
 >
-  <a [routerLink]="'/'" class="logo" (click)="isMenuOpen = false">
-    @if (showLogo){
+  <a [routerLink]="'/'" class="logo" (click)="isMenuOpen.set(false)">
+    @if (showLogo()){
     <div class="logo__wrapper">
       <img src="{{ logoSource }}" alt="logo" />
     </div>
@@ -18,9 +18,9 @@
   <div class="header__right">
     <button
       class="header__menu-button menu-button"
-      [class.menu-button--open]="isMenuOpen"
+      [class.menu-button--open]="isMenuOpen()"
       [class.menu-button--closed]="!isMenuOpen"
-      (click)="isMenuOpen = !isMenuOpen"
+      (click)="isMenuOpen.set(!isMenuOpen())"
     >
       <span class="menu-button__item menu-button__item--1"></span>
       <span class="menu-button__item menu-button__item--2"></span>
@@ -28,9 +28,9 @@
     </button>
   </div>
 
-  @if (isMenuOpen){
+  @if (isMenuOpen()){
   <div class="menu">
-    <app-nav (itemClicked)="isMenuOpen = false"></app-nav>
+    <app-nav (itemClicked)="isMenuOpen.set(false)"></app-nav>
     <!-- <button class="menu__theme-switch" (click)="toggleTheme()">
             Theme wechseln
             <mat-icon *ngIf="theme.currentTheme === 'light'">brightness_2</mat-icon>
@@ -39,6 +39,6 @@
   </div>
   }
 </header>
-@if (isMenuOpen) {
-<div class="backdrop backdrop--full" (click)="isMenuOpen = false"></div>
+@if (isMenuOpen()) {
+<div class="backdrop backdrop--full" (click)="isMenuOpen.set(false)"></div>
 }

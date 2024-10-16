@@ -1,22 +1,22 @@
-<div class="hero hero--{{ orientation }}">
+<div class="hero hero--{{ orientation() }}">
   <div class="hero__image">
-    <img src="{{ hero.imagePath }}" alt="{{ hero.title | transloco }}" />
+    <img src="{{ hero().imagePath }}" alt="{{ hero().title | transloco }}" />
   </div>
   <span class="hero__title">
-    {{ hero.title | transloco }}
+    {{ hero().title | transloco }}
   </span>
   <span class="hero__description">
-    {{ hero.description | transloco }}
-    @if(hero.link !== undefined) {
+    {{ hero().description | transloco }}
+    @if(hero().link !== undefined) {
     <span class="hero__link-wrapper">
-      <a class="hero__link" href="{{ hero.link }}" target="_blank">
+      <a class="hero__link" href="{{ hero().link }}" target="_blank">
         {{ "hero.show" | transloco }}
       </a>
     </span>
     }
   </span>
   <div class="hero__tech">
-    @for (tech of hero.tech; track tech) {
+    @for (tech of hero().tech; track tech) {
     <app-tech-stack-item-small [item]="tech"></app-tech-stack-item-small>
     }
   </div>

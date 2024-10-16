@@ -1,5 +1,13 @@
 [
   {
+    "from": "2024",
+    "to": "2026",
+    "primaryText": "education.masters.primary",
+    "secondaryText": "education.masters.secondary",
+    "icon": "assets/university.svg",
+    "size": "full"
+  },
+  {
     "from": "2021",
     "to": "2024",
     "primaryText": "education.bachelor.primary",

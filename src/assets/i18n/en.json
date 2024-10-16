@@ -13,8 +13,10 @@
   "nav.imprint": "Imprint",
   "general.today": "today",
   "education": {
-    "bachelor.primary": "Software Engineering - Part Time",
+    "bachelor.primary": "Software Engineering BSc - Part Time",
     "bachelor.secondary": "University of Applied Sciences Hagenberg",
+    "masters.primary": "Software Engineering MSc - Full Time",
+    "masters.secondary": "University of Applied Sciences Hagenberg",
     "sbl.primary": "Study Preparatory Programme",
     "sbl.secondary": "University of Applied Sciences Wels",
     "apprenticeship.primary": "Apprenticeship Electrotechnics (Building Technology)",

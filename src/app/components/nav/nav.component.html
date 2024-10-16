@@ -5,7 +5,7 @@
         {{ "nav.home" | transloco }}
       </a>
       <ul class="nav__sublist">
-        @for (r of menuService.getAboutMeRoutes(); track r) {
+        @for (r of menuService.aboutMeRoutes(); track r) {
         <li class="nav__sub-item">
           <a
             class="nav__link"

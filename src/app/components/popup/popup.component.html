@@ -1,7 +1,7 @@
 <div class="backdrop backdrop--full" (click)="requestClose()"></div>
 <div class="popup">
   @if (titleText !== undefined) {
-  <span class="popup__title">{{ titleText }}</span>
+  <span class="popup__title">{{ titleText() }}</span>
   }
   <button class="popup__close" (click)="requestClose()"></button>
   <div class="popup__content">

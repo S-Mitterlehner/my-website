@@ -13,8 +13,10 @@
   "nav.imprint": "Impressum",
   "general.today": "Heute",
   "education": {
-    "bachelor.primary": "Software Engineering - Berufsbegleitend",
+    "bachelor.primary": "Software Engineering BSc - Berufsbegleitend",
     "bachelor.secondary": "FH Hagenberg",
+    "masters.primary": "Software Engineering MSc - Vollzeit",
+    "masters.secondary": "FH Hagenberg",
     "sbl.primary": "Studienbefähigungslehrgang",
     "sbl.secondary": "FH Wels",
     "apprenticeship.primary": "Lehre Elektrotechnik - Gebäudetechnik",

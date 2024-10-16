@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, input, OnInit } from '@angular/core';
 import { slideInFromLeft } from 'src/app/animations/slide-in';
 import {
   ChronologicalDetails,
@@ -13,8 +13,8 @@ import { TranslocoService } from '@ngneat/transloco';
   animations: [slideInFromLeft],
 })
 export class ChronologicalListComponent implements OnInit {
-  @Input() items!: ChronologicalListItem[];
-  @Input() allowDetails = false;
+  items = input.required<ChronologicalListItem[]>();
+  allowDetails = input<boolean>(false);
   itemList: ChronologicalListItem[] = [];
   detail: ChronologicalDetails | undefined = undefined;
   showPopup: boolean = false;
@@ -23,8 +23,8 @@ export class ChronologicalListComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      this.itemList = this.items;
-      this.detail = this.items[0].details;
+      this.itemList = this.items();
+      this.detail = this.items()[0].details;
     }, 1000);
   }
 

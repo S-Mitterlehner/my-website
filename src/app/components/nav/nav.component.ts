@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, signal } from '@angular/core';
+import { Component, output } from '@angular/core';
 import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
@@ -6,10 +6,8 @@ import { MenuService } from 'src/app/services/menu.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.sass'],
 })
-export class NavComponent implements OnInit {
-  @Output() itemClicked = new EventEmitter();
+export class NavComponent {
+  itemClicked = output<void>();
 
   constructor(public menuService: MenuService) {}
-
-  ngOnInit(): void {}
 }

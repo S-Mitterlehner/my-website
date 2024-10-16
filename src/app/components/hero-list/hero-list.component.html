@@ -1,5 +1,5 @@
-<ul class="hero-list" [@listAnimation]="items.length">
-  @for (hero of items; track hero) {
+<ul class="hero-list" [@listAnimation]="items().length">
+  @for (hero of items(); track hero) {
   <li>
     <app-hero
       [hero]="hero"

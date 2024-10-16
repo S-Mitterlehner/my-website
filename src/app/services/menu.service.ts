@@ -1,14 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Signal, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class MenuService {
-  getAboutMeRoutes() {
-    return [
-      { route: 'tech-stack' },
-      { route: 'experiences' },
-      { route: 'education' },
-    ];
+  private _aboutMeRoutes = signal<{ route: string }[]>([
+    { route: 'tech-stack' },
+    { route: 'experiences' },
+    { route: 'education' },
+  ]);
+  get aboutMeRoutes(): Signal<{ route: string }[]> {
+    return this._aboutMeRoutes;
   }
 }

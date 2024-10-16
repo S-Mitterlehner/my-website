@@ -1,5 +1,5 @@
-<div class="tech-stack tech-stack--{{ size }}">
-  @for(cat of items; track cat.name) {
+<div class="tech-stack tech-stack--{{ size() }}">
+  @for(cat of items(); track cat.name) {
   <div class="tech-stack__category ts-category">
     <h3 class="ts-category__name">{{ cat.name }}</h3>
     <ul class="ts-category__items">
