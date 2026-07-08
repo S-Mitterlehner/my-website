@@ -80,5 +80,22 @@
         "level": "PRO"
       }
     ]
+  },
+  {
+    "name": "Machine Learning",
+    "items": [
+      {
+        "name": "Python",
+        "icon": "assets/tech/python.svg",
+        "since": "2023-01-01",
+        "level": "BEGINNER"
+      },
+      {
+        "name": "PyTorch",
+        "icon": "assets/tech/pytorch.svg",
+        "since": "2023-01-01",
+        "level": "BEGINNER"
+      }
+    ]
   }
 ]

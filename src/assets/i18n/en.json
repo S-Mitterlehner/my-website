@@ -1,7 +1,7 @@
 {
   "introduction.greeting": "Hello!",
   "introduction.intro": "My name is Stefan. I'm a {{age}} year old professional software engineer from Leonding, Austria for over {{experience}} years.",
-  "introduction.main": "In those years I gained lots of experience in different areas of software development, including C#/.NET, Angular and React. My main focus is web development (full stack), but I also have experience in desktop development with WPF. I'm also very interested in software architecture and design, but also recent developments in generative AI.",
+  "introduction.main": "In those years I gained lots of experience in different areas of software development, including C#/.NET, Angular and React. My main focus is web development (full stack), but I also have experience in desktop development with WPF. Throughout my masters I also learned a lot about machine learning and AI, which I also used for my master thesis. I'm also very interested in software architecture and design, but also in the latest developments of generative AIs.",
   "introduction.end": "If you have any question or interest, please feel free to contact me!",
   "hero.show": "Show me!",
   "nav.home": "Home",
@@ -13,6 +13,8 @@
   "nav.imprint": "Imprint",
   "general.today": "today",
   "education": {
+    "abroad.primary": "Study Abroad Semester",
+    "abroad.secondary": "NTNU Trondheim, Norway",
     "bachelor.primary": "Software Engineering BSc - Part Time",
     "bachelor.secondary": "University of Applied Sciences Hagenberg",
     "masters.primary": "Software Engineering MSc - Full Time",

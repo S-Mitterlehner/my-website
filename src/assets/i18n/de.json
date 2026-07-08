@@ -1,7 +1,7 @@
 {
   "introduction.greeting": "Hallo!",
   "introduction.intro": "Mein Name ist Stefan und ich bin ein {{age}} Jahre alter Software Entwickler aus Leonding, Österreich seit {{experience}} Jahren.",
-  "introduction.main": "In dieser Zeit konnte ich bereits einige Erfahrungen in verschiedenen Bereichen der Software Entwicklung, einschließlich C#/.NET, Angular und React, sammeln. Mein Hauptfokus liegt im Bereich der Web-Entwicklung (Full-Stack), aber ich habe auch Erfahrungen in der Desktop-Entwicklung mit WPF. Außerdem bin ich sehr interessiert an Software Architektur und Design, aber auch in den neuesten Entwicklungen generativer KIs.",
+  "introduction.main": "In diesen Jahren sammelte ich umfangreiche Erfahrung in verschiedenen Bereichen der Softwareentwicklung, darunter C#/.NET, Angular und React. Mein Schwerpunkt liegt auf der Webentwicklung (Full-Stack), ich verfüge aber auch über Erfahrung in der Desktop-Entwicklung mit WPF. Während meines Masterstudiums lernte ich zudem viel über Maschinelles Lernen und KI, die ich auch in meiner Masterarbeit verarbeitete. Ich interessiere mich außerdem sehr für Softwarearchitektur und -design sowie für die neuesten Entwicklungen im Bereich generativer KI.",
   "introduction.end": "Haben Sie Fragen oder Interesse? Dann freue ich mich auf Ihre Nachricht.",
   "hero.show": "Anzeigen",
   "nav.home": "Home",
@@ -13,6 +13,8 @@
   "nav.imprint": "Impressum",
   "general.today": "Heute",
   "education": {
+    "abroad.primary": "Auslandssemester",
+    "abroad.secondary": "NTNU Trondheim, Norwegen",
     "bachelor.primary": "Software Engineering BSc - Berufsbegleitend",
     "bachelor.secondary": "FH Hagenberg",
     "masters.primary": "Software Engineering MSc - Vollzeit",

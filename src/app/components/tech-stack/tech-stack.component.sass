@@ -1,12 +1,15 @@
 @import sass/imports
 
 .tech-stack
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
+    display: grid
+    justify-items: center
+    grid-template-columns: 1fr 1fr 1fr
 
-    @include media-query()
-        flex-direction: column
+    @media (max-width: 1600px) 
+        grid-template-columns: 1fr 1fr
+
+    @media (max-width: 768px) 
+        grid-template-columns: 1fr
 
 
 .ts-category
@@ -28,7 +31,12 @@
 
     &__items
         display: grid
-        grid-template-columns: 12rem 12rem 12rem
+        grid-template-columns: 1fr 1fr 1fr
+        justify-items: center
 
-        @include media-query()
-            grid-template-columns: 12rem 12rem 
+        @media (max-width: 400px) 
+            grid-template-columns: 1fr 1fr
+
+        
+        @media (max-width: 280px) 
+            grid-template-columns: 1fr

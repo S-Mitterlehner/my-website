@@ -1,11 +1,24 @@
 [
   {
+    "from": "2025",
+    "primaryText": "education.abroad.primary",
+    "secondaryText": "education.abroad.secondary",
+    "icon": "assets/university.svg",
+    "size": "full"
+  },
+  {
     "from": "2024",
     "to": "2026",
     "primaryText": "education.masters.primary",
     "secondaryText": "education.masters.secondary",
     "icon": "assets/university.svg",
-    "size": "full"
+    "size": "full",
+    "details": {
+      "thesis": {
+        "name": "Deck-Aware Card Recommendation in Magic: The Gathering",
+        "description": "Producing card recommendations for the game \"Magic: The Gathering\" based on a given deck. Recommendations are generated using a Dual Encoder combined with a Set Transformer, trained with a contrastive loss function."
+      }
+    }
   },
   {
     "from": "2021",
@@ -13,7 +26,12 @@
     "primaryText": "education.bachelor.primary",
     "secondaryText": "education.bachelor.secondary",
     "icon": "assets/university.svg",
-    "size": "full"
+    "size": "full",
+    "details": {
+      "tasks": [
+        "Thesis: \"Using Large Language Models for Unit-Test Generation\""
+      ]
+    }
   },
   {
     "from": "2020",

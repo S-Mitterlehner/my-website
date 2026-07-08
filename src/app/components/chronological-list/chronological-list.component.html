@@ -1,36 +1,46 @@
 <ul class="chrono-list" [@listAnimation]="itemList.length">
   @for (i of itemList; track i.primaryText) {
-  <li class="chrono-list__item">
-    <div class="chrono-item chrono-item--{{ i.size }}">
-      <span class="chrono-item__icon">
-        <img [src]="i.icon" />
-      </span>
-      <span class="chrono-item__years">{{ getYearString(i) }}</span>
-      <span class="chrono-item__primary-text">
-        {{ i.primaryText | transloco }}
-      </span>
-      <span class="chrono-item__secondary-text">
-        {{ i.secondaryText | transloco }}
-      </span>
-      @if (allowDetails() && i.details !== undefined){
-      <span class="chrono-item__details">
-        <button
-          class="chrono-item__detail-button arrow-button"
-          (click)="showDetails(i.details)"
-        ></button>
-      </span>
-      }
-    </div>
-  </li>
+    <li class="chrono-list__item">
+      <div class="chrono-item chrono-item--{{ i.size }}">
+        <span class="chrono-item__icon">
+          <img [src]="i.icon" />
+        </span>
+        <span class="chrono-item__years">{{ getYearString(i) }}</span>
+        <span class="chrono-item__primary-text">
+          {{ i.primaryText | transloco }}
+        </span>
+        <span class="chrono-item__secondary-text">
+          {{ i.secondaryText | transloco }}
+        </span>
+        @if (allowDetails() && i.details !== undefined) {
+          <span class="chrono-item__details">
+            <button
+              class="chrono-item__detail-button arrow-button"
+              (click)="showDetails(i.details)"
+            ></button>
+          </span>
+        }
+      </div>
+    </li>
   }
 </ul>
 <!--TODO:Animate out-->
-<app-popup titleText="Tasks" (closeRequested)="closePopup()" *ngIf="showPopup">
-  <ul class="chrono-detail">
-    @for (item of detail?.tasks; track item) {
-    <li class="chrono-detail__item">
-      {{ item | transloco }}
-    </li>
-    }
-  </ul>
+<app-popup titleText="Info" (closeRequested)="closePopup()" *ngIf="showPopup">
+  @if (detail?.thesis) {
+    <div class="chrono-thesis">
+      <h3 class="chrono-thesis__title">Thesis: {{ detail?.thesis?.name }}</h3>
+      <p class="chrono-thesis__description">
+        {{ detail?.thesis?.description }}
+      </p>
+    </div>
+  }
+  @if (detail?.tasks) {
+    <ul class="chrono-detail">
+      @for (item of detail?.tasks; track item) {
+        <li class="chrono-detail__item">
+          {{ item | transloco }}
+        </li>
+      }
+    </ul>
+  }
 </app-popup>
